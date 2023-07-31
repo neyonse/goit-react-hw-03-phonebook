@@ -1,0 +1,55 @@
+.filter {
+  position: relative;
+  width: 240px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.searchIcon {
+  position: absolute;
+  height: 100%;
+  color: gray;
+
+  transition: color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.searchIcon > svg {
+  height: 100%;
+  width: 60%;
+  color: inherit;
+}
+
+.input {
+  padding: 8px 12px 8px 40px;
+  width: 100%;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+
+  border: 2px solid gray;
+  border-radius: 25px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.filter:is(:hover, :focus) .input {
+  border-color: slateblue;
+}
+
+.filter:is(:hover, :focus) .searchIcon {
+  color: slateblue;
+}
+
+.input::placeholder {
+  font-size: 16px;
+
+  color: rgb(100, 100, 100);
+}
+
+.input::-webkit-search-cancel-button {
+  -webkit-filter: saturate(0);
+  transition: opacity 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}

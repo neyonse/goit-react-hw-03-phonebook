@@ -1,0 +1,73 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 320px;
+  margin: 24px auto 0;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+}
+
+.input {
+  padding: 8px 12px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+
+  border: 2px solid gray;
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.input:is(:hover, :focus) {
+  border-color: slateblue;
+}
+
+.error {
+  margin-top: 4px;
+  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: crimson;
+}
+
+.submitBtn {
+  padding: 8px 12px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+
+  box-shadow: 0px 1px 2px #aaa, inset 0px 0px 8px white;
+  border: 2px solid gray;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
+    border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.submitBtn:is(:hover, :focus) {
+  color: slateblue;
+
+  border-color: slateblue;
+  box-shadow: 0px 2px 8px #aaa, inset 0px 0px 8px white;
+}

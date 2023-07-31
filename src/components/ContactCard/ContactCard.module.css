@@ -1,0 +1,75 @@
+.contactCard {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+
+  border: 2px solid gray;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px #aaa, inset 0px 0px 8px white;
+
+  transition: border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media screen and (max-width: 719px) {
+  .contactCard {
+    max-width: 375px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .contactCard {
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contactCard {
+    width: calc((100% - 40px * 2) / 3);
+  }
+}
+
+.contactCard:is(:hover, :focus) {
+  border-color: slateblue;
+
+  cursor: pointer;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deleteBtn {
+  padding: 8px 12px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+
+  box-shadow: 0px 1px 2px #aaa, inset 0px 0px 8px white;
+  border: 2px solid gray;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
+    border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.deleteBtn:is(:hover, :focus) {
+  color: slateblue;
+
+  border-color: slateblue;
+  box-shadow: inset 0px 2px 8px #aaa;
+}
