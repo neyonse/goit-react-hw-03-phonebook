@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Section.module.css';
 
-export const Section = ({ title, children }) => {
+export const Section = ({ className, title, children }) => {
   return (
-    <section>
+    <section className={css[className]}>
       <div className="container">
         <h2 className={css.sectionTitle}>{title}</h2>
         {children}

@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './ContactCard.module.css';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 export const ContactCard = ({ id, name, number, onDelete }) => {
   return (
     <li className={css.contactCard} id={id}>
-      <p className={css.contactDetails}>
-        {name}: <span className={css.contactNumber}>{number}</span>
-      </p>
-      <button className={css.deleteBtn} onClick={onDelete} aria-label="delete">
+      <div className={css.contactDetails}>
+        <p className={css.contactName}>{name}</p>
+        <p className={css.contactNumber}>
+          <span className={css.contactNumberIcon}>
+            <FaPhoneAlt />
+          </span>
+          {number}
+        </p>
+      </div>
+      <button
+        className={css.deleteBtn}
+        type="button"
+        onClick={onDelete}
+        aria-label="delete contact"
+      >
         Delete
       </button>
     </li>

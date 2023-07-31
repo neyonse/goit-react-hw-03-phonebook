@@ -7,6 +7,13 @@
   margin: 24px auto 0;
 }
 
+@media screen and (min-width: 1440px) {
+  .form {
+    width: 320px;
+    margin: 32px 0 0;
+  }
+}
+
 .label {
   display: flex;
   flex-direction: column;
@@ -14,27 +21,30 @@
   width: 100%;
 
   font-size: 16px;
-  font-weight: 500;
-  color: gray;
+  font-weight: 400;
+  color: fff;
 }
 
 .input {
-  padding: 8px 12px;
+  padding: 6px 12px;
 
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-main-color);
 
-  border: 2px solid gray;
-  border-radius: 4px;
+  border: none;
+  border: 3px solid var(--main-color);
+  border-radius: 8px;
   outline: none;
 
-  transition: border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: inset 0px 0px 6px var(--main-color);
+
+  transition: border-color var(--hover-transition);
 }
 
 .input:is(:hover, :focus) {
-  border-color: slateblue;
+  border-color: var(--secondary-color);
 }
 
 .error {
@@ -42,32 +52,30 @@
   text-align: center;
 
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: crimson;
+  color: var(--error-text-color);
+  text-shadow: 1px 1px 2px black;
 }
 
 .submitBtn {
-  padding: 8px 12px;
+  padding: 8px 16px;
 
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-main-color);
 
-  box-shadow: 0px 1px 2px #aaa, inset 0px 0px 8px white;
-  border: 2px solid gray;
+  border: none;
   border-radius: 8px;
 
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
-    border-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1),
-    box-shadow 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color var(--hover-transition),
+    background-color var(--hover-transition),
+    border-color var(--hover-transition);
 }
 
 .submitBtn:is(:hover, :focus) {
-  color: slateblue;
-
-  border-color: slateblue;
-  box-shadow: 0px 2px 8px #aaa, inset 0px 0px 8px white;
+  color: var(--text-secondary-color);
+  background-color: var(--accent-color-01);
 }

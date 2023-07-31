@@ -1,5 +1,6 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 @import 'fonts/fonts.css';
+@import 'css/variables.css';
 
 * {
   box-sizing: border-box;
@@ -20,8 +21,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
-  background-color: #e7e7e7;
+  color: var(--text-secondary-color);
+  background-color: var(--main-color);
 }
 
 img {
@@ -41,26 +42,32 @@ ul {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 767px) {
   .container {
-    max-width: 375px;
+    max-width: 767px;
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .container {
     padding: 0 24px;
-    width: 720px;
+    max-width: 768px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .container {
-    max-width: 1200px;
-    width: 1200px;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
   }
-}
 
-section {
-  margin-top: 80px;
+  .main-wrapper {
+    display: flex;
+    gap: 64px;
+    margin: 40px auto;
+    padding: 0 32px;
+    max-width: 1440px;
+    width: 1440px;
+  }
 }

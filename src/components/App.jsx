@@ -63,12 +63,12 @@ export class App extends Component {
     const filteredContacts = this.getFilteredContacts();
 
     return (
-      <>
-        <Section title="Phonebook">
+      <div className="main-wrapper">
+        <Section className="addContactSection" title="Phonebook">
           <AddContactForm onAddContact={this.handleAddContact} />
         </Section>
         {contacts.length !== 0 && (
-          <Section title="Contacts">
+          <Section className="contactListSection" title="Contacts">
             <Filter value={filter} onFilterChange={this.handleFilterChange} />
             <ContactsList
               contacts={filteredContacts}
@@ -76,7 +76,7 @@ export class App extends Component {
             />
           </Section>
         )}
-      </>
+      </div>
     );
   }
 }
