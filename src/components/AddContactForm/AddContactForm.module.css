@@ -68,6 +68,7 @@
 
   border: none;
   border-radius: 8px;
+  background-color: var(--secondary-color);
 
   cursor: pointer;
   transition: color var(--hover-transition),

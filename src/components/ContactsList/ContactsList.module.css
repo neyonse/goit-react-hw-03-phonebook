@@ -6,3 +6,9 @@
   margin: 24px auto 0;
   width: 100%;
 }
+
+@media screen and (min-width: 1440px) {
+  .list {
+    gap: 24px;
+  }
+}

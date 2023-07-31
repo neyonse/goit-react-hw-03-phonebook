@@ -7,6 +7,8 @@
 
 .searchIcon {
   position: absolute;
+  left: 0;
+  margin-right: auto;
   height: 100%;
   color: var(--text-main-color-lighter);
 

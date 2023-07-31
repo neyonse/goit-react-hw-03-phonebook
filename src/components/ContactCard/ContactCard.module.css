@@ -12,7 +12,7 @@
   color: var(--text-main-color);
 
   border-bottom: 3px solid var(--text-main-color-lighter);
-  border-radius: 24px;
+  /* border-radius: 24px; */
 
   transition: border-color var(--hover-transition);
 }
@@ -70,6 +70,7 @@
 
   border: none;
   border-radius: 8px;
+  background-color: #ddd;
 
   cursor: pointer;
   transition: color var(--hover-transition),
